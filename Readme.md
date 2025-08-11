@@ -2,7 +2,7 @@
 
 * Студент: [Эльвира Николенко](https://up.htmlacademy.ru/adaptive-individual/2/user/1402471).
 * Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
-* Проект: [Кэт-энерджи](https://github.com/Elvira-Nikolenko/1402471-cat-energy-2).
+* Проект: [Кэт-энерджи]().
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами для работы над проектом — `source/`.**
