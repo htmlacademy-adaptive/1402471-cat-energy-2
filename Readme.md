@@ -1,7 +1,8 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Эльвира Николенко](https://up.htmlacademy.ru/adaptive-individual/2/user/1402471).
-* Наставник: `Неизвестно`.
+* Наставник: `Андрей Грачев`(https://htmlacademy.ru/profile/angra).
+* Проект: `Cat Energy`(https://elvira-nikolenko.github.io/1402471-cat-energy-2/).
 
 ---
 
