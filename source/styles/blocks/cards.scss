@@ -1,0 +1,33 @@
+.cards__list {
+  list-style-type: none;
+}
+
+.cards__headline {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 36px;
+  color: $alt-font-color;
+}
+
+.cards__title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $alt-font-color;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.cards__description {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.cards__text {
+  color: #111111;
+}
+
+.cards__last-button {
+  color: $base-color-text;
+  background-color: #f2f2f2;
+}

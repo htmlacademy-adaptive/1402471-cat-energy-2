@@ -1,0 +1,31 @@
+.additional-product__headline {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $alt-font-color;
+}
+
+.additional-product__list {
+  list-style-type: none;
+}
+
+.additional-product__title {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.additional-product__description {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+
+.additional-product__text {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #68b738;
+}

@@ -1,0 +1,35 @@
+.example__title {
+  font-family: $secondary-font;
+  font-size: 36px;
+  line-height: 40px;
+  color: $alt-font-color;
+  text-transform: uppercase;
+}
+
+.example__list {
+  list-style-type: none;
+}
+
+.example__item {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 24px;
+  color: $alt-font-color;
+  text-transform: uppercase;
+}
+
+.example__definition {
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 12px;
+  color: $alt-font-color;
+  text-transform: lowercase;
+}
+
+.example__illustration-title {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 20px;
+  color: $alt-font-color;
+  text-transform: uppercase;
+}
