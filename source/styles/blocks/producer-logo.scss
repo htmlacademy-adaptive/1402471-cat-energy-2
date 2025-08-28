@@ -2,3 +2,19 @@
   text-decoration: none;
   color: $base-color-text;
 }
+
+.producer-logo:active {
+  opacity: 30%;
+}
+
+.producer-logo svg {
+  color: $base-color-text;
+}
+
+.producer-logo svg:hover {
+  color: #68b738;
+}
+
+.producer-logo svg:active {
+  color: rgba(104, 183, 56, 0.3);
+}

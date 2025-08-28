@@ -5,3 +5,78 @@
 .services__list {
   list-style-type: none;
 }
+
+.services__item {
+  background-color: #f2f2f2;
+}
+
+.services__item .services__title::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #68b738;
+}
+
+.services__item .services__title::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.services__item:nth-child(odd) .services__title::after {
+  top: -3px;
+  left: 7px;
+  width: 36px;
+  height: 50px;
+  background-image: url("../../icons/stack.svg#skinny-cat");
+}
+
+.services__item:nth-child(even) .services__title::after {
+  top: 11px;
+  left: -9px;
+  width: 67px;
+  height: 28px;
+  background-image: url("../../icons/stack.svg#skinny-cat-1");
+}
+
+.services__title {
+  position: relative;
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  color: $alt-font-color;
+  text-transform: uppercase;
+  padding-left: 90px;
+}
+
+.services__button {
+  position: relative;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 16px;
+  color: $alt-font-color;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.services__button::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 10px;
+  background-image: url("../../icons/stack.svg#arrow");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 8px;
+  left: 89px;
+}
+
+.services__button:active {
+  opacity: 30%;
+}

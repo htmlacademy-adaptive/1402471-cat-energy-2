@@ -9,3 +9,57 @@
 .methodology__list {
   list-style-type: none;
 }
+
+.methodology__item::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-color: #68b738;
+}
+
+.methodology__item {
+  position: relative;
+  margin-top: 20px;
+}
+
+.methodology__item::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.methodology__item:nth-child(1)::after {
+  top: 16px;
+  left: 18px;
+  width: 24px;
+  height: 28px;
+  background-image: url("../../icons/stack.svg#leaf");
+}
+
+.methodology__item:nth-child(2)::after {
+  top: 16px;
+  left: 18px;
+  width: 24px;
+  height: 28px;
+  background-image: url("../../icons/stack.svg#water");
+}
+
+.methodology__item:nth-child(3)::after {
+  top: 16px;
+  left: 18px;
+  width: 24px;
+  height: 28px;
+  background-image: url("../../icons/stack.svg#fork");
+}
+
+.methodology__item:nth-child(4)::after {
+  top: 16px;
+  left: 18px;
+  width: 24px;
+  height: 28px;
+  background-image: url("../../icons/stack.svg#watch");
+}

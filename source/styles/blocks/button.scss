@@ -7,3 +7,12 @@
   text-decoration: none;
   background-color: #68b738;
 }
+
+.button:hover {
+  background-color: #5eaa2f;
+}
+
+.button:active {
+  background-color: #5eaa2f;
+  color: rgba(255, 255, 255, 0.3);
+}
