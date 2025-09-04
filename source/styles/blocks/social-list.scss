@@ -1,5 +1,9 @@
 .social-list {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  padding: 0;
 }
 
 .social-list__link svg {

@@ -1,3 +1,26 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-right: auto;
+}
+
+.logo__link {
+  width: 100%;
+  max-width: 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    gap: 13px;
+  }
+
+  @include tablet {
+    gap: 13px;
+  }
+}
+
 .logo__image:hover,
 .logo__text:hover {
   opacity: 80%;
@@ -6,4 +29,10 @@
 .logo__image:active,
 .logo__text:active {
   opacity: 60%;
+}
+
+.logo__toggle {
+  @include tablet {
+    display: none;
+  }
 }
