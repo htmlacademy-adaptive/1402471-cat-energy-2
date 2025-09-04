@@ -1,9 +1,37 @@
+.address {
+  display: flex;
+
+  @include tablet {
+    height: 200px;
+    gap: 307px;
+    padding: 61px 70px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    z-index: 1;
+    max-width: 565px;
+    min-height: 199px;
+    background-color: #ffffff;
+    gap: 87px;
+  }
+}
+
 .address__tittle {
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 20px;
   color: $alt-font-color;
   text-transform: uppercase;
+  margin: 0;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 26px;
+    text-align: start;
+  }
 }
 
 .address__text {
@@ -13,4 +41,10 @@
   color: $base-color-text;
   text-transform: uppercase;
   font-style: normal;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
 }

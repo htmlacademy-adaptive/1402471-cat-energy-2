@@ -1,6 +1,15 @@
 .producer-logo {
   text-decoration: none;
   color: $base-color-text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include tablet {
+    gap: 23px;
+  }
 }
 
 .producer-logo:active {

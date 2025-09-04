@@ -7,3 +7,15 @@
     font-display: swap;
   }
 }
+
+@mixin tablet {
+  @media (min-width: $tablet-resolution) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-resolution) {
+    @content;
+  }
+}

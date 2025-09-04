@@ -1,18 +1,92 @@
 .promo {
-  background-color: #68b738;
   font-family: $secondary-font;
   color: #ffffff;
-}
+  background-image: url("../../images/background-mobile@2x.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
 
+  @include tablet {
+    background-image: none;
+  }
+}
 
 .promo__tagline {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  text-align: center;
+  margin: 0;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: left;
+    margin-left: 90px;
+  }
+
+  @include desktop {
+    margin-right: 720px;
+    margin-left: 0;
+  }
 }
 
 .promo__text {
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: left;
+    margin-left: 90px;
+  }
+
+  @include desktop {
+    margin-left: 0;
+  }
+}
+
+.promo__container {
+  padding-top: 27px;
+
+  @include tablet {
+    position: relative;
+  }
+
+  @include desktop {
+    padding: 80px 110px 52px;
+  }
+}
+
+.promo__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 40px;
+
+  @include tablet {
+    width: 286px;
+    height: 20px;
+    position: absolute;
+    top: 231px;
+    left: 116px;
+  }
+
+  @include desktop {
+    top: 277px;
+    left: 107px;
+  }
+}
+
+.promo__image {
+  @include desktop {
+    margin-left: 37%;
+    margin-top: -110px;
+  }
 }

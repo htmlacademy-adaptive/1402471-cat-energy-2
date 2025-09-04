@@ -1,3 +1,11 @@
+.alt-main-logo {
+  margin: 0 auto;
+
+  @include tablet {
+    margin: 0;
+  }
+}
+
 .alt-main-logo svg {
   width: 128px;
   height: 24px;

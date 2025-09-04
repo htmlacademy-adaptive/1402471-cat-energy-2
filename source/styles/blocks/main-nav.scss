@@ -1,3 +1,16 @@
+.main-nav__container {
+  @include tablet {
+    padding: 0;
+  }
+}
+
 .main-nav__list {
   list-style-type: none;
+  text-align: center;
+  padding: 0;
+
+  @include tablet {
+    display: flex;
+    gap: 33px;
+  }
 }

@@ -1,27 +1,46 @@
 .newsletter__title {
+  align-items: left;
   font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   color: $alt-font-color;
+
+  @include tablet {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
 
 .newsletter__description {
+  text-align: center;
   font-family: $secondary-font;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: $alt-font-color;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .newsletter__field {
+  box-sizing: border-box;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 24px;
   color: $base-color-text;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .newsletter__button {
   font-size: 20px;
   line-height: 26px;
+  width: 100%;
+  border: none;
+  margin-top: 16px;
 }
