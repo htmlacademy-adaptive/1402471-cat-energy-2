@@ -1,3 +1,30 @@
+.site-list__item {
+  padding: 21px 0 23px;
+  border-top: 1px solid #e6e6e6;
+
+  @include tablet {
+    border: none;
+    padding: 39px 0 12px;
+    margin-left: 12px;
+  }
+
+  @include desktop {
+    border: none;
+  }
+}
+
+.site-list__item:last-child {
+  border-bottom: 1px solid #e6e6e6;
+
+  @include tablet {
+    border: none;
+  }
+
+  @include desktop {
+    border: none;
+  }
+}
+
 .site-list__link {
   font-family: $secondary-font, sans-serif;
   font-size: 20px;
@@ -22,5 +49,12 @@
 .site-list__link--dark {
   @include desktop {
     color: #000000;
+  }
+}
+
+.site-list__link--active {
+  @include tablet {
+    padding-bottom: 7px;
+    border-bottom: 2px solid #68b738;
   }
 }

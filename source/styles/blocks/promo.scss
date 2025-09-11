@@ -1,13 +1,24 @@
 .promo {
   font-family: $secondary-font;
   color: #ffffff;
-  background-image: url("../../images/background-mobile@2x.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
+  position: relative;
 
-  @include tablet {
-    background-image: none;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 62.52%;
+    width: 100%;
+    background-image: url("../../images/background-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    z-index: -1;
+
+    @include tablet {
+      display: none;
+    }
   }
 }
 
@@ -19,6 +30,7 @@
   margin: 0;
 
   @include tablet {
+    margin-top: 29px;
     font-size: 60px;
     line-height: 60px;
     color: #000000;
@@ -37,6 +49,7 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
+  margin: 25px 0 0 0;
 
   @include tablet {
     font-size: 20px;
@@ -44,6 +57,7 @@
     color: #000000;
     text-align: left;
     margin-left: 90px;
+    margin-top: 41px;
   }
 
   @include desktop {
@@ -63,19 +77,32 @@
   }
 }
 
+.promo__container picture {
+  display: block;
+  margin-top: 30px;
+
+  @include tablet {
+    margin-top: 20px;
+  }
+}
+
 .promo__button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   min-height: 40px;
+  max-width: 510px;
+  margin: 0 auto;
 
   @include tablet {
-    width: 286px;
-    height: 20px;
+    width: 243px;
+    height: 56px;
     position: absolute;
-    top: 231px;
-    left: 116px;
+    top: 285px;
+    left: 120px;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   @include desktop {
@@ -85,6 +112,10 @@
 }
 
 .promo__image {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+
   @include desktop {
     margin-left: 37%;
     margin-top: -110px;

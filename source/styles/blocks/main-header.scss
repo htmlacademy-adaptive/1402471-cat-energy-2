@@ -1,3 +1,7 @@
+.main-header {
+  position: relative;
+}
+
 .main-header__container {
   @include tablet {
     display: flex;

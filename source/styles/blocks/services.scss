@@ -1,6 +1,11 @@
 .services__list {
   list-style-type: none;
   padding: 0;
+  margin-top: 18px;
+
+  @include tablet {
+    margin-top: 0;
+  }
 
   @include desktop {
     display: flex;
@@ -10,9 +15,15 @@
 
 .services__item {
   background-color: #f2f2f2;
+  position: relative;
+  padding: 17px 21px;
+  max-width: 470px;
+  margin: 0 auto;
 }
 
 .services__item:not(:last-child) {
+  margin-bottom: 20px;
+
   @include tablet {
     margin-bottom: 30px;
   }
@@ -22,21 +33,21 @@
   }
 }
 
-.services__item .services__title::before {
+.services__item::before {
   content: "";
   position: absolute;
   width: 50px;
   height: 50px;
-  top: 0;
-  left: 0;
+  top: 29px;
+  left: 20px;
   border-radius: 50%;
   background-color: #68b738;
 
   @include tablet {
     width: 200px;
     height: 200px;
-    top: 0;
-    left: 415px;
+    top: 93px;
+    left: 446px;
   }
 
   @include desktop {
@@ -47,16 +58,16 @@
   }
 }
 
-.services__item .services__title::after {
+.services__item::after {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.services__item:nth-child(odd) .services__title::after {
-  top: -3px;
-  left: 7px;
+.services__item:nth-child(odd)::after {
+  top: 27px;
+  left: 27px;
   width: 36px;
   height: 50px;
   background-image: url("../../icons/stack.svg#skinny-cat");
@@ -64,8 +75,8 @@
   @include tablet {
     width: 140px;
     height: 194px;
-    top: -5px;
-    left: 435px;
+    top: 82px;
+    left: 476px;
   }
 
   @include desktop {
@@ -76,9 +87,9 @@
   }
 }
 
-.services__item:nth-child(even) .services__title::after {
-  top: 11px;
-  left: -9px;
+.services__item:nth-child(even)::after {
+  top: 41px;
+  left: 13px;
   width: 67px;
   height: 28px;
   background-image: url("../../icons/stack.svg#skinny-cat-1");
@@ -86,8 +97,8 @@
   @include tablet {
     width: 268px;
     height: 112px;
-    top: 57px;
-    left: 382px;
+    top: 135px;
+    left: 416px;
   }
 
   @include desktop {
@@ -100,7 +111,7 @@
 
 .services__item:nth-child(n+1) {
   @include tablet {
-    padding: 77px 250px 77px 53px;
+    padding: 77px 250px 63px 53px;
   }
 
   @include desktop {
@@ -109,17 +120,21 @@
 }
 
 .services__title {
-  position: relative;
   font-family: $secondary-font;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   color: $alt-font-color;
   text-transform: uppercase;
-  padding-left: 90px;
+  padding-left: 69px;
+  margin: 18px 0 30px 0;
 
   @include tablet {
-    padding: 0 250px 0 0;
+    margin: 0;
+    padding: 0;
+    max-width: 340px;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   @include desktop {
@@ -128,9 +143,26 @@
 }
 
 .services__text {
+  position: relative;
+
   @include tablet {
     font-size: 16px;
     line-height: 24px;
+    max-width: 340px;
+    margin-top: 25px;
+  }
+}
+
+.services__text::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  margin-top: 39px;
+  left: 0;
+  border-bottom: 1px solid #d9d9d9;
+
+  @include tablet {
+    border: none;
   }
 }
 
@@ -142,9 +174,12 @@
   color: $alt-font-color;
   text-transform: uppercase;
   text-decoration: none;
+  display: block;
+  margin-top: 41px;
 
   @include tablet {
     font-size: 20px;
+    margin-top: 60px;
   }
 }
 
@@ -156,12 +191,12 @@
   background-image: url("../../icons/stack.svg#arrow");
   background-repeat: no-repeat;
   background-position: center;
-  top: 8px;
-  left: 89px;
+  top: 3px;
+  left: 101px;
 
   @include tablet {
-    top: 10px;
-    left: 112px;
+    top: 2px;
+    left: 134px;
   }
 }
 
