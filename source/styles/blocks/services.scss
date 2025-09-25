@@ -9,7 +9,8 @@
 
   @include desktop {
     display: flex;
-    gap: 80px;
+    gap: 81px;
+    margin-top: 130px;
   }
 }
 
@@ -19,6 +20,10 @@
   padding: 17px 21px;
   max-width: 470px;
   margin: 0 auto;
+
+  @include desktop {
+    width: 570px;
+  }
 }
 
 .services__item:not(:last-child) {
@@ -29,7 +34,7 @@
   }
 
   @include desktop {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
@@ -53,8 +58,8 @@
   @include desktop {
     width: 100px;
     height: 100px;
-    top: -64px;
-    left: 0px;
+    top: 48px;
+    left: 52px;
   }
 }
 
@@ -82,8 +87,8 @@
   @include desktop {
     width: 70px;
     height: 97px;
-    top: -63px;
-    left: 16px;
+    top: 41px;
+    left: 66px;
   }
 }
 
@@ -98,14 +103,14 @@
     width: 268px;
     height: 112px;
     top: 135px;
-    left: 416px;
+    left: 413px;
   }
 
   @include desktop {
     width: 134px;
     height: 56px;
-    top: -43px;
-    left: -19px;
+    top: 67px;
+    left: 33px;
   }
 }
 
@@ -115,7 +120,7 @@
   }
 
   @include desktop {
-    padding: 77px 61px 77px 55px;
+    padding: 77px 61px 67px 50px;
   }
 }
 
@@ -127,7 +132,7 @@
   color: $alt-font-color;
   text-transform: uppercase;
   padding-left: 69px;
-  margin: 18px 0 30px 0;
+  margin: 18px 0 30px;
 
   @include tablet {
     margin: 0;
@@ -138,7 +143,7 @@
   }
 
   @include desktop {
-    padding: 0 0 0 250px;
+    padding: 0 0 0 162px;
   }
 }
 
@@ -150,6 +155,11 @@
     line-height: 24px;
     max-width: 340px;
     margin-top: 25px;
+  }
+
+  @include desktop {
+    margin-top: 74px;
+    max-width: 520px;
   }
 }
 
@@ -181,17 +191,26 @@
     font-size: 20px;
     margin-top: 60px;
   }
+
+  @include desktop {
+    margin-top: 34px;
+    margin-left: 2px;
+  }
+}
+
+.services__button:active {
+  opacity: 30%;
 }
 
 .services__button::after {
   content: "";
   position: absolute;
   width: 32px;
-  height: 10px;
+  height: 11px;
   background-image: url("../../icons/stack.svg#arrow");
   background-repeat: no-repeat;
   background-position: center;
-  top: 3px;
+  top: 2px;
   left: 101px;
 
   @include tablet {
@@ -200,6 +219,14 @@
   }
 }
 
-.services__button:active {
-  opacity: 30%;
+.services__item:last-child .services__button::after {
+  left: 97px;
+
+  @include tablet {
+    left: 127px;
+  }
+}
+
+.services__button:hover::after {
+  background-image: url("../../icons/stack.svg#arrow-long");
 }

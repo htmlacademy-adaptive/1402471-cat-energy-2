@@ -6,7 +6,12 @@
   padding: 14px 0 9px;
 
   @include tablet {
-    padding: 29px 7px 9px;
+    padding: 25px 0 0;
+    gap: 12px;
+  }
+
+  @include desktop {
+    padding: 55px 0 0;
   }
 }
 
@@ -21,8 +26,14 @@
     gap: 13px;
   }
 
-  @include tablet {
-    gap: 13px;
+  @include desktop {
+    gap: 0;
+  }
+}
+
+.logo__text {
+  @include desktop {
+    margin-left: 13px;
   }
 }
 

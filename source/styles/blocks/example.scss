@@ -3,7 +3,11 @@
 
   @include tablet {
     border-top: 1px solid #e6e6e6;
-    background: linear-gradient(to bottom, #ffffff 57.4%, #eaeaea 0%);
+    background: linear-gradient(to bottom, #ffffff 57%, #eaeaea 0%);
+  }
+
+  @include desktop {
+    background: linear-gradient(to bottom, #ffffff 25%, #eaeaea 0%);
   }
 }
 
@@ -19,6 +23,10 @@
     grid-template-columns: minmax(367px, 1fr) 1fr;
     padding: 0 30px;
   }
+
+  @include desktop {
+    max-width: 1440px;
+  }
 }
 
 .example__title {
@@ -33,12 +41,14 @@
     font-size: 60px;
     line-height: 60px;
     text-align: start;
-    margin-top: 44px;
+    margin-top: 49px;
     grid-column: 1 / -1;
   }
 
   @include desktop {
     grid-column: 1 / 2;
+    padding: 0 0 0 79px;
+    margin-top: 26px;
   }
 }
 
@@ -54,6 +64,8 @@
 
   @include desktop {
     grid-column: 1 / 2;
+    margin-top: 146px;
+    padding: 0 176px 0 81px;
   }
 }
 
@@ -66,10 +78,12 @@
 
   @include desktop {
     grid-column: 1 / 2;
+    padding: 14px 0 0 79px;
   }
 }
 
 .example__item {
+  position: relative;
   font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
@@ -80,13 +94,18 @@
   margin-top: 6px;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
-  padding: 14px 18px 0 22px;
+  padding: 14px 18px 17px 22px;
 
   @include tablet {
     font-size: 30px;
     line-height: 37px;
-    padding: 18px 14px 0 18px;
-    margin-top: 38px;
+    padding: 15px 15px 0 18px;
+    margin-top: 40px;
+    margin-bottom: 9px;
+  }
+
+  @include desktop {
+    padding: 17px 15px 16px 18px;
   }
 }
 
@@ -104,12 +123,14 @@
 }
 
 .example__definition {
+  position: absolute;
   font-family: $primary-font;
   font-size: 12px;
   line-height: 12px;
   color: $alt-font-color;
   text-transform: lowercase;
-  margin: 8px 0 -16px 0;
+  top: 46px;
+  left: 34px;
   padding: 0;
   display: block;
   background-color: #eaeaea;
@@ -119,12 +140,25 @@
     font-size: 14px;
     line-height: 14px;
     color: #444444;
-    margin: 12px 0 -16px 0;
+    top: 61px;
+    left: 32px;
+  }
+
+  @include desktop {
+    background-color: #eaeaea;
+  }
+}
+
+.example__item:last-child .example__definition {
+  @include tablet {
+    left: 21px;
   }
 }
 
 .example__definition br {
-  display: none;
+  @include tablet {
+    display: none;
+  }
 }
 
 .example__illustration-title {
@@ -147,6 +181,8 @@
   @include desktop {
     text-align: start;
     grid-column: 1 / 2;
+    padding: 0 0 0 81px;
+    margin-bottom: 18px;
   }
 }
 
@@ -156,6 +192,18 @@
   @include tablet {
     display: inline;
   }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.example__illustration-title span {
+  margin-left: 4px;
+
+  @include desktop {
+    margin-left: 65px;
+  }
 }
 
 .example__image-container {
@@ -164,10 +212,16 @@
 
   @include tablet {
     grid-column: span 2;
+    margin-top: 96px;
+    margin-bottom: 97px;
+    padding: 0 75px;
   }
 
   @include desktop {
     grid-column: 2 / -1;
+    margin-top: -450px;
+    padding: 0 75px 0 50px;
+    margin-bottom: 75px;
   }
 }
 
@@ -178,7 +232,8 @@
   position: relative;
 }
 
-.example__fat-cat, .example__skinny-cat {
+.example__fat-cat,
+.example__skinny-cat {
   min-width: 200%;
   height: auto;
 }
@@ -198,6 +253,11 @@
   z-index: 1;
   cursor: pointer;
   background-color: #666666;
+
+  @include desktop {
+    top: -5px;
+    left: 48%;
+  }
 }
 
 .example__image-container-toggle::before {
@@ -206,11 +266,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   border: 2px solid #666666;
   border-radius: 50%;
   background-color: #ffffff;
+
+  @include tablet {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .example__image-container-toggle::after {
@@ -226,4 +291,28 @@
   mask-size: cover;
   mask-position: center;
   mask-repeat: no-repeat;
+}
+
+.example__image-container-toggle:hover {
+  background-color: #68b738;
+}
+
+.example__image-container-toggle:hover::after {
+  background-color: #68b738;
+}
+
+.example__image-container-toggle:hover::before {
+  border-color: #68b738;
+}
+
+.example__image-container-toggle:active {
+  background-color: #5eaa2f;
+}
+
+.example__image-container-toggle:active::after {
+  background-color: #5eaa2f;
+}
+
+.example__image-container-toggle:active::before {
+  border-color: #5eaa2f;
 }

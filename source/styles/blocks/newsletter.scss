@@ -1,14 +1,68 @@
+.newsletter {
+  position: relative;
+}
+
+.newsletter__container {
+  @include tablet {
+    padding: 78px 30px 0;
+  }
+
+  @include desktop {
+    padding: 95px 73px 0;
+  }
+}
+
+.newsletter::after {
+  content: "";
+  border: 1px solid #68b738;
+  width: 33%;
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  @include tablet {
+    width: 100%;
+    z-index: -1;
+    top: 93px;
+  }
+
+  @include desktop {
+    top: 115px;
+  }
+}
+
+.newsletter__form {
+  @include tablet {
+    position: relative;
+    max-width: 708px;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    max-width: 1295px;
+  }
+}
+
 .newsletter__title {
-  align-items: left;
+  text-align: left;
   font-family: $secondary-font;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   color: $alt-font-color;
+  margin: 40px 0 0;
 
   @include tablet {
     font-size: 32px;
     line-height: 32px;
+    background: #ffffff;
+    padding: 0 40px;
+    display: inline;
+  }
+
+  @include desktop {
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 
@@ -19,28 +73,69 @@
   line-height: 24px;
   font-weight: 400;
   color: $alt-font-color;
+  margin: 33px auto 0;
+  max-width: 510px;
 
   @include tablet {
     font-size: 24px;
     line-height: 32px;
+    max-width: 800px;
+    padding: 0 94px;
+    margin: 65px auto 160px;
+  }
+
+  @include desktop {
+    margin: 68px auto 185px;
   }
 }
 
 .newsletter__field {
+  display: block;
   box-sizing: border-box;
   font-family: $secondary-font;
   font-size: 20px;
   line-height: 24px;
   color: $base-color-text;
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 23px auto 0;
+  text-transform: uppercase;
+  padding: 15px 13px;
+  border: 1px solid #cdcdcd;
+  max-width: 510px;
+
+  @include tablet {
+    position: absolute;
+    top: 163px;
+    left: 37px;
+    max-width: 380px;
+  }
+
+  @include desktop {
+    max-width: 500px;
+    top: 141px;
+    left: 270px;
+  }
 }
 
 .newsletter__button {
+  display: block;
   font-size: 20px;
   line-height: 26px;
   width: 100%;
   border: none;
-  margin-top: 16px;
+  margin: 16px auto 40px;
+  padding: 15px 0;
+  max-width: 510px;
+
+  @include tablet {
+    position: absolute;
+    max-width: 256px;
+    top: 170px;
+    right: 37px;
+  }
+
+  @include desktop {
+    top: 148px;
+    right: 272px;
+  }
 }

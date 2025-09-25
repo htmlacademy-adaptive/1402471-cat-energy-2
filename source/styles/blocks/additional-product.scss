@@ -1,8 +1,50 @@
+.additional-product {
+  position: relative;
+}
+
+.additional-product::after {
+  content: "";
+  border: 1px solid #68b738;
+  width: 10%;
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  @include tablet {
+    width: 100%;
+    top: 78px;
+    z-index: -1;
+  }
+
+  @include desktop {
+    z-index: 1;
+    width: 914px;
+    top: 77px;
+  }
+}
+
+.additional-product::before {
+  @include desktop {
+    content: "";
+    border: 1px solid #68b738;
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    top: 77px;
+    left: 0;
+  }
+}
+
 .additional-product__container {
+  @include tablet {
+    padding: 64px 30px 0;
+  }
+
   @include desktop {
     display: grid;
     grid-template-columns: auto 245px;
     gap: 80px;
+    padding: 59px 110px 0;
   }
 }
 
@@ -13,12 +55,13 @@
   background-size: cover;
   min-height: 290px;
   display: flex;
-  padding: 0 61px;
+  margin-top: 35px;
 
   @include tablet {
     background-image: url("../../images/background-catalog-tablet@2x.jpg");
     background-size: cover;
     min-height: 200px;
+    margin-top: 72px;
   }
 
   @include desktop {
@@ -39,12 +82,12 @@
   background-image: url("../../icons/stack.svg#gift");
   background-repeat: no-repeat;
   background-position: center;
-  top: 30%;
+  top: 20%;
   left: calc(50% - 39px);
 
   @include tablet {
-    top: 20%;
-    left: calc(25% - 39px);
+    top: 28%;
+    left: calc(25% - 98px);
   }
 
   @include desktop {
@@ -59,27 +102,51 @@
   line-height: 24px;
   font-weight: 400;
   color: $alt-font-color;
+  margin: 28px 0 0;
 
   @include tablet {
+    display: inline;
     font-size: 32px;
     line-height: 32px;
+    padding: 0 40px;
+    margin: 77px 0 0;
+    background-color: #ffffff;
   }
 
   @include desktop {
     grid-column: 1 / -1;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .additional-product__list {
   list-style-type: none;
   padding: 0;
+  max-width: 510px;
+  margin: 35px auto 0;
+
+  @include tablet {
+    max-width: 800px;
+    margin: 77px auto 0;
+  }
+
+  @include desktop {
+    margin: 0;
+    min-width: 896px;
+  }
 }
 
 .additional-product__item {
   display: flex;
   flex-direction: column;
+  padding: 13px 0 18px;
+  border-top: 1px solid #cdcdcd;
 
   @include tablet {
+    border: 1px solid #cdcdcd;
     padding: 28px 38px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -87,8 +154,16 @@
 
   @include desktop {
     grid-template-columns: 1fr 286px 1fr;
-    column-gap: 40px;
-    padding: 20px 0;
+    column-gap: 60px;
+    padding: 16px 0;
+    border: none;
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.additional-product__item:last-child {
+  @include desktop {
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
@@ -99,9 +174,15 @@
   font-weight: 400;
   color: #222222;
   text-transform: uppercase;
+  margin: 0;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   @include desktop {
-    margin: 0;
+    margin: 5px 0 0;
     font-size: 20px;
     line-height: 25px;
   }
@@ -111,16 +192,27 @@
   font-size: 14px;
   line-height: 14px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  margin: 14px 0 0;
 
   @include tablet {
-    gap: 55px;
+    margin: 0;
+    justify-content: flex-end;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 50px;
   }
 
   @include desktop {
     line-height: 20px;
     justify-content: space-between;
+    min-width: 285px;
+    margin: 11px 0 0 20px;
   }
+}
+
+.additional-product__description dd {
+  margin: 0;
 }
 
 
@@ -128,25 +220,32 @@
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  margin: 190px 0 0;
+  margin: 187px auto 0;
   text-align: center;
 
   @include tablet {
     margin: 70px 0 70px 420px;
+    text-align: left;
   }
 
   @include desktop {
     margin: 0;
+    text-align: center;
   }
 }
 
 .additional-product__button {
+  padding: 10px 0 9px;
+  margin-top: 15px;
+
   @include tablet {
     grid-column: 1 / -1;
+    margin-top: 22px;
   }
 
   @include desktop {
     width: 244px;
     grid-column: auto;
+    margin-top: 0;
   }
 }

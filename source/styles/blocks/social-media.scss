@@ -1,11 +1,18 @@
 .social-media {
   display: flex;
   flex-direction: column;
+  max-width: 510px;
 
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 147px;
+    max-width: 800px;
+  }
+
+  @include desktop {
+    height: 168px;
+    max-width: 1440px;
   }
 }

@@ -3,7 +3,7 @@
   color: #ffffff;
   position: relative;
 
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     top: 0;
@@ -22,6 +22,22 @@
   }
 }
 
+.promo__container {
+  padding-top: 27px;
+
+  @include tablet {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    max-width: 1440px;
+    padding: 71px 192px 0;
+
+  }
+}
+
 .promo__tagline {
   font-size: 36px;
   line-height: 36px;
@@ -30,7 +46,7 @@
   margin: 0;
 
   @include tablet {
-    margin-top: 29px;
+    margin-top: 34px;
     font-size: 60px;
     line-height: 60px;
     color: #000000;
@@ -39,7 +55,7 @@
   }
 
   @include desktop {
-    margin-right: 720px;
+    margin-right: 0;
     margin-left: 0;
   }
 }
@@ -49,7 +65,7 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
-  margin: 25px 0 0 0;
+  margin: 25px 0 0;
 
   @include tablet {
     font-size: 20px;
@@ -62,18 +78,6 @@
 
   @include desktop {
     margin-left: 0;
-  }
-}
-
-.promo__container {
-  padding-top: 27px;
-
-  @include tablet {
-    position: relative;
-  }
-
-  @include desktop {
-    padding: 80px 110px 52px;
   }
 }
 
@@ -99,15 +103,15 @@
     width: 243px;
     height: 56px;
     position: absolute;
-    top: 285px;
+    top: 289px;
     left: 120px;
     font-size: 20px;
     line-height: 26px;
   }
 
   @include desktop {
-    top: 277px;
-    left: 107px;
+    top: 336px;
+    left: 190px;
   }
 }
 
@@ -117,7 +121,7 @@
   margin: 0 auto;
 
   @include desktop {
-    margin-left: 37%;
-    margin-top: -110px;
+    width: 552px;
+    margin: -278px 367px 0;
   }
 }

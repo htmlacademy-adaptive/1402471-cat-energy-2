@@ -6,6 +6,10 @@
     max-width: 800px;
     margin: 0 auto;
   }
+
+  @include desktop {
+    max-width: 1440px;
+  }
 }
 
 
@@ -20,11 +24,11 @@
   @include tablet {
     font-size: 60px;
     line-height: 60px;
-    margin: 43px 0 0 0;
+    margin: 43px 0 0;
   }
 
   @include desktop {
-    margin-top: 73px;
+    margin-top: 70px;
   }
 }
 
@@ -35,17 +39,19 @@
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  counter-reset: section;
 
   @include tablet {
     flex-direction: row;
-    row-gap: 164px;
+    gap: 164px 57px;
     justify-content: space-between;
-    padding: 111px 0 99px;
+    padding: 106px 0 99px;
   }
 
   @include desktop {
     justify-content: start;
-    row-gap: 0;
+    gap: 80px;
+    padding: 68px 0 42px;
   }
 }
 
@@ -61,8 +67,8 @@
   @include tablet {
     width: 80px;
     height: 80px;
-    margin-left: 1px;
-    margin-top: -113px;
+    top: -112px;
+    left: 2px;
   }
 }
 
@@ -83,90 +89,72 @@
   }
 
   @include desktop {
-    min-width: 245px;
+    max-width: 245px;
     font-size: 16px;
+    margin-top: 116px;
+    margin-bottom: 55px;
   }
 }
 
 .methodology__text {
+  margin: 0;
+
   @include tablet {
     max-width: 250px;
-    margin: 0;
   }
 }
 
-.methodology__number {
+.methodology__text br {
   display: none;
 
   @include tablet {
     display: inline;
-    position: absolute;
+  }
+}
+
+.methodology__item::after {
+  position: absolute;
+  counter-increment: section;
+  content: counters(section, ".") " ";
+  display: none;
+
+  @include tablet {
+    display: block;
+    z-index: -1;
     font-family: $secondary-font;
     font-size: 280px;
     line-height: 280px;
     font-weight: 400;
     color: #f2f2f2;
-    margin-left: 117px;
-    margin-top: -153px;
-    z-index: -1;
+    top: -149px;
+    left: 115px;
   }
 }
 
-.methodology__item::after {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.methodology__item:nth-child(1)::after {
-  top: 13px;
-  left: 19px;
-  width: 24px;
-  height: 28px;
+.methodology__item:nth-child(1)::before {
   background-image: url("../../icons/stack.svg#leaf");
-
-  @include tablet {
-    top: -90px;
-    left: 29px;
-  }
+  background-size: 24px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.methodology__item:nth-child(2)::after {
-  top: 16px;
-  left: 18px;
-  width: 24px;
-  height: 28px;
+.methodology__item:nth-child(2)::before {
+  background-size: 24px 28px;
   background-image: url("../../icons/stack.svg#water");
-
-  @include tablet {
-    top: -90px;
-    left: 29px;
-  }
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.methodology__item:nth-child(3)::after {
-  top: 16px;
-  left: 18px;
-  width: 24px;
-  height: 28px;
+.methodology__item:nth-child(3)::before {
+  background-size: 24px 28px;
   background-image: url("../../icons/stack.svg#fork");
-
-  @include tablet {
-    top: -90px;
-    left: 29px;
-  }
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.methodology__item:nth-child(4)::after {
-  top: 16px;
-  left: 18px;
-  width: 24px;
-  height: 28px;
+.methodology__item:nth-child(4)::before {
+  background-size: 24px 28px;
   background-image: url("../../icons/stack.svg#watch");
-
-  @include tablet {
-    top: -90px;
-    left: 29px;
-  }
+  background-position: center;
+  background-repeat: no-repeat;
 }
