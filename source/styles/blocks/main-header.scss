@@ -2,6 +2,22 @@
   position: relative;
 }
 
+.main-header--index::before {
+  @include desktop {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-image: url("../../images/background-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: 0;
+    right: 0;
+    min-width: 50%;
+    height: 693px;
+    background-color: #5eaa2f;
+  }
+}
+
 .main-header__container {
   @include tablet {
     display: flex;

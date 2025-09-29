@@ -9,8 +9,9 @@
 
   @include desktop {
     display: flex;
-    gap: 81px;
+    gap: 80px;
     margin-top: 130px;
+    flex-wrap: wrap;
   }
 }
 
@@ -120,7 +121,7 @@
   }
 
   @include desktop {
-    padding: 77px 61px 67px 50px;
+    padding: 77px 50px 67px;
   }
 }
 

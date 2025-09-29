@@ -5,8 +5,9 @@
   @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 52px 60px;
+    gap: 41px 60px;
     margin-top: 62px;
+    margin-bottom: 5px;
   }
 
   @include desktop {
@@ -27,7 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px 0 37px;
+    padding: 32px 0 43px;
     max-height: 88%;
     min-width: 324px;
     background: linear-gradient(to bottom, #ffffff 19%, #f2f2f2 0%);
@@ -45,7 +46,7 @@
   @include tablet {
     background: none;
     border: 1px solid #cdcdcd;
-    margin-top: auto;
+    margin-top: 102px;
   }
 }
 
@@ -141,11 +142,14 @@
 .cards__description dd {
   text-align: right;
   margin: 0;
+  font-family: $primary-font, sans-serif;
 }
 
 .cards__description dt {
+  font-family: $primary-font, sans-serif;
+
   @include tablet {
-    padding: 0 0 8px;
+    padding: 2px 0 7px;
     border-bottom: 1px solid #dcdcdc;
     width: 200%;
   }

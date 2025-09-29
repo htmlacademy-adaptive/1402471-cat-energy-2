@@ -34,7 +34,6 @@
   @include desktop {
     max-width: 1440px;
     padding: 71px 192px 0;
-
   }
 }
 
@@ -52,6 +51,7 @@
     color: #000000;
     text-align: left;
     margin-left: 90px;
+    max-width: 450px;
   }
 
   @include desktop {
@@ -74,6 +74,7 @@
     text-align: left;
     margin-left: 90px;
     margin-top: 41px;
+    max-width: 450px;
   }
 
   @include desktop {
@@ -103,15 +104,13 @@
     width: 243px;
     height: 56px;
     position: absolute;
-    top: 289px;
-    left: 120px;
+    margin: -580px 0 0 90px;
     font-size: 20px;
     line-height: 26px;
   }
 
   @include desktop {
-    top: 336px;
-    left: 190px;
+    margin: -191px 0 0;
   }
 }
 

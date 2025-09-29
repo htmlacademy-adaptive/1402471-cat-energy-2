@@ -7,7 +7,8 @@ const mapIframe = document.querySelector('.map__iframe');
 
 burgerMenu?.classList.remove('main-nav--open');
 burgerButton?.classList.remove('logo__toggle--active');
-burgerMenu?.classList.add('main-nav--js');
+burgerButton?.classList.remove('logo__toggle--no-js');
+burgerMenu?.classList.remove('main-nav--js');
 mapImg?.classList.add('map__static-map--hidden');
 mapIframe?.classList.add('map__iframe--show');
 

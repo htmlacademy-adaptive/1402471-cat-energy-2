@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <title>Cat Energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswaldregular.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Lato-Regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Lato-Regular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
@@ -16,7 +14,7 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body page__body-illustrate">
-    <header class="main-header">
+    <header class="main-header main-header--index">
       <div class="main-header__container container">
         <div class="logo">
           <a class="logo__link" href="index.html">
@@ -31,7 +29,7 @@
               <img class="logo__text" src="images/logo-text.svg" width="101" height="18" alt="Текстовый логотип магазина Cat Energy">
             </picture>
           </a>
-          <button class="logo__toggle logo__toggle--active" type="button">
+          <button class="logo__toggle logo__toggle--no-js logo__toggle--active" type="button">
             <span class="logo__burger"></span>
             <span class="visually-hidden">Открыть меню</span>
           </button>
