@@ -1,0 +1,25 @@
+.map__static-map {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.map__iframe {
+  border: none;
+  height: 362px;
+  width: 100%;
+  display: none;
+
+  @include tablet {
+    height: 400px;
+  }
+
+  &--show {
+    display: block;
+  }
+}

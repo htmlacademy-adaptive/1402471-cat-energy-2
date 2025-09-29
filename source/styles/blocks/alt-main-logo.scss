@@ -1,0 +1,22 @@
+.alt-main-logo {
+  margin: 39px auto 16px;
+
+  @include tablet {
+    margin: 5px 0 0;
+  }
+}
+
+.alt-main-logo svg {
+  width: 128px;
+  height: 24px;
+  color: #111111;
+}
+
+
+.alt-main-logo svg:hover {
+  color: #3e3e3e;
+}
+
+.alt-main-logo svg:active {
+  color: #6b6b6b;
+}

@@ -1,0 +1,34 @@
+.producer-logo {
+  text-decoration: none;
+  color: $base-color-text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 22px 0 42px;
+  border-top: 1px solid #d9d9d9;
+  margin: 0;
+
+  @include tablet {
+    gap: 23px;
+    border-top: none;
+    padding: 39px 0 42px;
+  }
+}
+
+.producer-logo:active {
+  opacity: 30%;
+}
+
+.producer-logo svg {
+  color: $base-color-text;
+}
+
+.producer-logo svg:hover {
+  color: #68b738;
+}
+
+.producer-logo svg:active {
+  color: rgba(104, 183, 56, 0.3);
+}
