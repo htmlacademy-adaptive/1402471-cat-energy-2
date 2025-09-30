@@ -12,7 +12,7 @@
 
   @include desktop {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 50px 80px;
+    gap: 42px 80px;
     margin-top: 68px;
   }
 }
@@ -85,6 +85,15 @@
   display: flex;
   justify-content: center;
   margin-top: auto;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 .cards__image-little {
@@ -191,7 +200,7 @@
 
   @include desktop {
     max-width: 168px;
-    margin: 39px auto 0;
+    margin: 35px auto 0;
   }
 }
 
@@ -252,6 +261,14 @@
 
   @include desktop {
     margin: -6px 0 25px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
