@@ -50,27 +50,39 @@
 
 .additional-product__wrapper {
   position: relative;
-  background-image: url("../../images/background-catalog-mobile@2x.jpg");
+  background-image: url("../../images/background-catalog-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 290px;
   display: flex;
   margin-top: 35px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/background-catalog-mobile@2x.jpg");
+  }
+
   @include tablet {
-    background-image: url("../../images/background-catalog-tablet@2x.jpg");
+    background-image: url("../../images/background-catalog-tablet@1x.jpg");
     background-size: cover;
     min-height: 200px;
     margin-top: 72px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/background-catalog-tablet@2x.jpg");
+    }
   }
 
   @include desktop {
-    background-image: url("../../images/background-catalog-desktop@2x.jpg");
+    background-image: url("../../images/background-catalog-desktop@1x.jpg");
     background-size: contain;
     padding: 185px 42px 42px;
     margin: 0;
     background-position: left;
     box-sizing: border-box;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/background-catalog-desktop@2x.jpg");
+    }
   }
 }
 

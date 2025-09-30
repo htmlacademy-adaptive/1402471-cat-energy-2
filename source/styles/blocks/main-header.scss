@@ -7,7 +7,7 @@
     content: "";
     position: absolute;
     z-index: -1;
-    background-image: url("../../images/background-desktop@2x.jpg");
+    background-image: url("../../images/background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     top: 0;
@@ -15,6 +15,10 @@
     min-width: 50%;
     height: 693px;
     background-color: #5eaa2f;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/background-desktop@2x.jpg");
   }
 }
 
